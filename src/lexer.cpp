@@ -1,6 +1,5 @@
 #include "lexer.h"
 #include <cctype>
-#include <algorithm>
 
 
 Lexer::Lexer(const std::string& input)

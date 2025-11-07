@@ -4,8 +4,6 @@
 
 #include "common.h"
 
-#include <unordered_set>
-
 
 class Lexer {
 public:
