@@ -6,21 +6,21 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(assembler
-        lexer.cpp
-        parser.cpp
-        symbol_table.cpp
-        code_gen.cpp
-        assembler.cpp
-        main.cpp
+        src/lexer.cpp
+        src/parser.cpp
+        src/symbol_table.cpp
+        src/code_gen.cpp
+        src/assembler.cpp
+        src/main.cpp
 )
 
 target_sources(assembler PRIVATE
-        common.h
-        lexer.h
-        parser.h
-        symbol_table.h
-        code_gen.h
-        assembler.h
+        src/common.h
+        src/lexer.h
+        src/parser.h
+        src/symbol_table.h
+        src/code_gen.h
+        src/assembler.h
 )
 
 install(TARGETS assembler DESTINATION bin)
