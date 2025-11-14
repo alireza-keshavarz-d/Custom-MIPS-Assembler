@@ -48,9 +48,8 @@ The executable will be in the `build/` directory:
 ---
 
 ## Usage
-
 ```bash
-./assembler <input.asm> <inst_output.txt> <data_output.txt>
+./assembler <input.asm> <inst_template.vhd> <inst_output.vhd> <data_template.vhd> <data_output.vhd>
 ```
 
 ### Example
@@ -73,11 +72,9 @@ halt:
     .word 0
 ```
 
-```bash
-./assembler example.asm inst.txt data.txt
-```
+will result in (not templated)
 
-Output files (`inst.txt`, `data.txt`) will contain:
+IM
 ```
 00000000000000000000000000100011   # lw a0, 0(r0)
 00000000000000000001000000100011   # lw a1, 4(r0)
@@ -86,6 +83,7 @@ Output files (`inst.txt`, `data.txt`) will contain:
 00010000000000000000100000000000   # beq r0,r0,halt
 ```
 
+DM
 ```
 00000000000000000000000000000111   # 7
 00000000000000000000000000000101   # 5
@@ -116,6 +114,7 @@ TBA ...
 ├── src/             # Source files (.cpp, .h)
 ├── CMakeLists.txt   # Cross-platform build
 ├── .github/         # GitHub Actions CI/CD
+├── templates/       # tempaltes for DM and IM vhdl files
 └── README.md
 ```
 
