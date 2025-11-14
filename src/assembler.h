@@ -9,7 +9,10 @@ class Assembler {
 public:
     explicit Assembler(std::string  input);
 
-    void assemble(const std::string& instruction_file, const std::string& data_file) const;
+    void assemble(
+        const std::string& instruction_file_path, const std::string& data_file_path,
+        const std::string& instruction_template_path, const std::string& data_template_path
+    ) const;
 
 private:
     std::string input_;

@@ -93,4 +93,7 @@ const std::unordered_map<std::string_view, uint32_t> REG_MAP = {
     {"t0", 24}, {"t1", 25}, {"t2", 26}, {"t3", 27}, {"t4", 28}, {"t5", 29}, {"t6", 30}, {"t7", 31}
 };
 
+// the assembler will output to the files, in lines that starts (whitespace is allowed) with "###"
+constexpr std::string_view subs_token = "###";
+
 #endif // COMMON_H

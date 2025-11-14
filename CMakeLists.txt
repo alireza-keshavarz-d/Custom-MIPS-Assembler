@@ -21,6 +21,7 @@ target_sources(assembler PRIVATE
         src/symbol_table.h
         src/code_gen.h
         src/assembler.h
+        src/utils.h
 )
 
 install(TARGETS assembler DESTINATION bin)
